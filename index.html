@@ -27,48 +27,43 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="hero">
-        <div class="hero-glow"></div>
-        <div class="container">
-            <div style="display: flex; align-items: center; gap: 60px; flex-wrap: wrap;">
-                <!-- Columna izquierda: texto y botones (igual que antes) -->
-                <div style="flex: 1;">
-                    <span class="section-tag reveal">Simplificá tu negocio</span>
-                    <h1 class="text-gradient reveal">Tu comercio, bajo control.<br>Sin vueltas.</h1>
-                    <p class="reveal">MiniMercado es la herramienta definitiva para gestionar ventas, stock y clientes
-                        de forma simple, rápida y desde cualquier lugar.</p>
-                    <div class="hero-btns reveal">
-                        <a href="#contacto" class="btn btn-primary">Solicitar demo gratuita</a>
-                        <a href="#funciones" class="btn btn-outline">Ver funcionalidades</a>
-                    </div>
+<!-- Hero -->
+<header class="hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+        <div style="display: flex; align-items: center; gap: 60px; flex-wrap: wrap;">
+            <!-- Columna izquierda: texto y botones -->
+            <div style="flex: 1;">
+                <span class="section-tag reveal">Simplificá tu negocio</span>
+                <h1 class="text-gradient reveal">Tu comercio, bajo control.<br>Sin vueltas.</h1>
+                <p class="reveal">MiniMercado es la herramienta definitiva para gestionar ventas, stock y clientes de forma simple, rápida y desde cualquier lugar.</p>
+                <div class="hero-btns reveal">
+                    <a href="#contacto" class="btn btn-primary">Solicitar demo gratuita</a>
+                    <a href="#funciones" class="btn btn-outline">Ver funcionalidades</a>
                 </div>
-
-                <!-- Columna derecha: dashboard simulado -->
-                <div style="flex: 1;" class="reveal">
-                    <div
-                        style="background: rgba(16, 185, 129, 0.05); border-radius: 24px; padding: 24px; border: 1px solid rgba(16, 185, 129, 0.15); backdrop-filter: blur(10px);">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 24px;">
-                            <div
-                                style="background: rgba(16,185,129,0.2); padding: 8px 16px; border-radius: 20px; font-size: 13px;">
-                                📊 Hoy</div>
-                            <div style="color: #10b981;">+23% ↑</div>
-                        </div>
-                        <div style="font-size: 32px; font-weight: 700; margin-bottom: 8px;">$124.580</div>
-                        <div style="font-size: 14px; color: #888; margin-bottom: 24px;">Ventas del día</div>
-                        <div
-                            style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 24px;">
-                            <div style="width: 78%; height: 4px; background: #10b981; border-radius: 4px;"></div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                            <div><span style="color: #10b981;">●</span> Stock: 156</div>
-                            <div><span style="color: #f59e0b;">●</span> Fiados: $12.400</div>
-                        </div>
+            </div>
+            
+            <!-- Columna derecha: imagen real del sistema en móvil -->
+            <div style="flex: 1; display: flex; justify-content: center;" class="reveal">
+                <div style="position: relative; border-radius: 48px; background: linear-gradient(145deg, #1a1a1a, #0f0f0f); padding: 12px; border: 1px solid rgba(16, 185, 129, 0.3); box-shadow: 0 25px 45px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(16, 185, 129, 0.1);">
+                    <!-- Marco del celular -->
+                    <div style="background: #000; border-radius: 40px; padding: 8px; position: relative;">
+                        <!-- Notch / Dynamic Island simulado -->
+                        <div style="position: absolute; top: 16px; left: 50%; transform: translateX(-50%); width: 110px; height: 30px; background: #000; border-radius: 20px; z-index: 10;"></div>
+                        <!-- Pantalla con la imagen -->
+                        <img src="Img/Sistema/Gemini_Generated_Image_movil.png" alt="MiniMercado en celular" 
+                             style="width: 500px; height: auto; display: block; border-radius: 32px; max-width: 100%;">
+                        <!-- Barra de navegación inferior simulada -->
+                        <div style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); width: 120px; height: 4px; background: #333; border-radius: 10px;"></div>
                     </div>
+                    
+                    <!-- Efecto glow detrás -->
+                    <div style="position: absolute; inset: 0; border-radius: 48px; background: radial-gradient(circle, rgba(16,185,129,0.15), transparent); pointer-events: none;"></div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Stats -->
     <section class="stats">
@@ -167,6 +162,46 @@
             </div>
         </div>
     </section>
+
+    <!-- Screenshots del sistema -->
+<section class="section-padding">
+    <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto; margin-bottom: 60px;">
+            <span class="section-tag reveal">Conocé el sistema</span>
+            <h2 class="section-title reveal">Diseñado para simplificar tu día a día</h2>
+            <p class="reveal" style="color: var(--fg-muted);">Interfaz intuitiva, rápida y pensada para minimercados y comercios.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <!-- Imagen 1 -->
+            <div class="reveal" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition);">
+                <img src="Img/Sistema/Gemini_Image_Ventas.png" alt="Pantalla de ventas" style="width: 100%; height: auto; display: block;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-bottom: 8px;">📊 Panel de Ventas</h3>
+                    <p style="font-size: 14px; color: var(--fg-muted);">Realizá ventas en segundos con escaneo rápido.</p>
+                </div>
+            </div>
+            
+            <!-- Imagen 2 -->
+            <div class="reveal" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition);">
+                <img src="Img/Sistema/Gemini_Image_Stock.png" alt="Control de stock" style="width: 100%; height: auto; display: block;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-bottom: 8px;">📦 Control de Stock</h3>
+                    <p style="font-size: 14px; color: var(--fg-muted);">Alertas automáticas y gestión de inventario.</p>
+                </div>
+            </div>
+            
+            <!-- Imagen 3 -->
+            <div class="reveal" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition);">
+                <img src="Img/Sistema/Gemini_Image_cliente.png" alt="Gestión de clientes" style="width: 100%; height: auto; display: block;">
+                <div style="padding: 20px;">
+                    <h3 style="margin-bottom: 8px;">👥 Clientes y Fiados</h3>
+                    <p style="font-size: 14px; color: var(--fg-muted);">Controlá cuentas corrientes y cobranzas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Pricing -->
     <section id="planes" class="section-padding">

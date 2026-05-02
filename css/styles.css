@@ -451,13 +451,146 @@ footer {
     transform: translateY(0);
 }
 
-/* Responsive Nav - Logo centrado en móviles */
-@media (max-width: 768px) {
+/* Responsive para móviles (incluyendo Motorola G82 412px) */
+@media (max-width: 480px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    
     nav .container {
-        justify-content:flex-start; /* Centra todo el contenido */
+        display: flex;
+        justify-content:start;
+        width: 100%;
+        padding-right: 20px;
+        margin: 0;
+    }
+    
+    .nav-links {
+        display: none;
     }
     
     .logo {
-        margin: 0 auto; /* Centra el logo */
+        margin: 0;
+    }
+}
+
+/* ============================================
+   RESPONSIVE FIXES - Hero y Navegación
+   ============================================ */
+
+/* Fix para móviles (hasta 768px) */
+@media (max-width: 768px) {
+    /* Hero - cambiar a columna vertical */
+    .hero {
+        min-height: auto;
+        padding: 120px 0 60px;
+        text-align: center;
+    }
+    
+    /* El contenedor flex del hero debe ir en columna */
+    .hero .container > div[style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+    
+    /* Columna izquierda (texto) - centrado */
+    .hero .container > div > div:first-child {
+        text-align: center;
+        padding: 0 16px;
+    }
+    
+    /* Columna derecha (imagen) - centrada */
+    .hero .container > div > div:last-child {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    /* Imagen dentro del hero */
+    .hero img {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+    
+    /* Ajustar glow del hero */
+    .hero-glow {
+        width: 300px;
+        height: 300px;
+        opacity: 0.5;
+    }
+    
+    /* Texto del hero */
+    .hero p {
+        font-size: 16px;
+        padding: 0 16px;
+        max-width: 100%;
+    }
+    
+    .hero h1 {
+        font-size: clamp(32px, 6vw, 48px);
+        padding: 0 16px;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .hero-btns .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Fix específico para 480px o menos */
+@media (max-width: 480px) {
+    /* NAV - centrar el logo correctamente */
+    nav {
+        justify-content: center;
+        padding: 0;
+    }
+    
+    nav .container {
+        justify-content: center !important;
+        padding: 0 16px !important;
+        width: 100%;
+    }
+    
+    .nav-links {
+        display: none !important;
+    }
+    
+    .logo {
+        margin: 0 auto !important;
+    }
+    
+    .logo img {
+        height: 48px !important;
+    }
+    
+    /* Hero ajustes adicionales */
+    .hero {
+        padding: 100px 0 40px;
+    }
+    
+    /* Marco del celular más pequeño */
+    .hero [style*="border-radius: 48px"] {
+        transform: scale(0.95);
+    }
+}
+
+/* Fix para tablets pequeñas (entre 481px y 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero .container > div[style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 50px !important;
+    }
+    
+    .hero img {
+        max-width: 320px;
     }
 }
